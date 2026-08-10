@@ -17,9 +17,9 @@ export default function About() {
         </div>
         <div>
           <img
-            src="https://placehold.co/560x420/1B3A5C/FFFFFF?text=Apron+Security+Team"
+            src="/team-photo.jpg"
             alt="Apron Security guards standing in formation outside the head office"
-            style={{ borderRadius: '16px', boxShadow: 'var(--shadow-card)' }}
+            style={{ borderRadius: '16px', boxShadow: 'var(--shadow-card)', width: '100%', height: 'auto', objectFit: 'cover' }}
           />
         </div>
       </div>
