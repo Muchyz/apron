@@ -979,7 +979,7 @@ a:focus-visible, button:focus-visible {
   z-index: 200;
   display: flex;
   flex-direction: column;
-  padding: 22px 0;
+  padding: 10px 0 22px;
 }
 .navbar__drawer.open {
   transform: translateX(0);
@@ -1061,4 +1061,119 @@ a:focus-visible, button:focus-visible {
 .navbar__drawer-cta:hover {
   background: var(--red-dark);
   transform: none !important;
+}
+
+/* ---------- Drawer logo + social icons ---------- */
+.navbar__drawer-head {
+  position: relative;
+  justify-content: center;
+}
+.navbar__drawer-logo {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  background: var(--white);
+  object-fit: contain;
+  padding: 3px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+}
+.navbar__drawer-close {
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.navbar__drawer-social {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  padding: 20px 12px 8px;
+  margin-top: auto;
+  border-top: 1px solid rgba(212, 160, 23, 0.25);
+}
+.navbar__drawer-social a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+.navbar__drawer-social a:hover {
+  transform: translateY(-3px);
+}
+
+/* ---------- Force brand-colored social icons ---------- */
+
+
+.navbar__drawer-social-label {
+  text-align: center;
+  color: rgba(255,255,255,0.65);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 14px;
+  margin-bottom: -4px;
+}
+.navbar__drawer-social {
+  margin-top: 8px;
+  border-top: none;
+  padding-top: 10px;
+}
+
+.navbar__drawer-social a svg {
+  isolation: isolate;
+}
+
+.navbar__drawer-head {
+  padding: 4px 22px 16px;
+}
+
+/* ---------- Brand name styling (override) ---------- */
+.navbar__brand-name {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+.navbar__brand-name-line {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--white);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.navbar__brand-name-top {
+  font-size: 1.3rem;
+  letter-spacing: 0.05em;
+}
+.navbar__brand-name-bottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  margin-top: 2px;
+}
+.navbar__brand-rule {
+  flex: 1;
+  height: 1px;
+  max-width: 26px;
+  background: linear-gradient(90deg, transparent, var(--white), transparent);
+  opacity: 0.7;
+}
+.navbar__brand-tag {
+  display: block;
+  margin-top: 4px;
+  font-style: italic;
+  font-size: 0.82rem;
+  color: rgba(212, 160, 23, 0.85);
+  letter-spacing: 0.02em;
+}
+@media (max-width: 400px) {
+  .navbar__brand-name-line {
+    font-size: 1.15rem;
+  }
 }

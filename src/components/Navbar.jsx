@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { FacebookIcon, WhatsAppIcon, TikTokIcon, InstagramIcon } from './SocialIcons.jsx';
 import { Link, NavLink } from 'react-router-dom';
 import {
   Home as HomeIcon,
@@ -41,8 +42,13 @@ export default function Navbar() {
             alt="Apron Security Limited circular badge logo"
           />
           <span className="navbar__brand-text">
-            <span className="navbar__brand-name" style={{ display: 'block' }}>
-              APRON SECURITY LIMITED
+            <span className="navbar__brand-name">
+              <span className="navbar__brand-name-line navbar__brand-name-top">APRON SECURITY</span>
+              <span className="navbar__brand-name-line navbar__brand-name-bottom">
+                <span className="navbar__brand-rule"></span>
+                LIMITED
+                <span className="navbar__brand-rule"></span>
+              </span>
             </span>
             <span className="navbar__brand-tag">{company.tagline}</span>
           </span>
@@ -87,7 +93,7 @@ export default function Navbar() {
       <div className={`navbar__overlay${open ? ' open' : ''}`} onClick={close} />
       <aside className={`navbar__drawer${open ? ' open' : ''}`}>
         <div className="navbar__drawer-head">
-          <span className="navbar__drawer-title">Menu</span>
+          <img className="navbar__drawer-logo" src="/logo.png" alt="Apron Security badge" />
           <button className="navbar__drawer-close" aria-label="Close menu" onClick={close}>
             <X size={22} />
           </button>
@@ -116,6 +122,14 @@ export default function Navbar() {
             <PhoneCall size={20} strokeWidth={2} />
             <span>Contact Us</span>
           </Link>
+
+          <p className="navbar__drawer-social-label">Follow Us on</p>
+          <div className="navbar__drawer-social">
+            <a href="https://www.facebook.com/profile.php?id=61569605530931" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FacebookIcon /></a>
+            <a href="https://wa.me/254718539540" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><WhatsAppIcon /></a>
+            <a href="https://vm.tiktok.com/ZS9k18PwgrBKu-gOcbD/" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><TikTokIcon /></a>
+            <a href="https://www.instagram.com/apronsecurityservices" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><InstagramIcon /></a>
+          </div>
         </nav>
       </aside>
     </header>
