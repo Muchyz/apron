@@ -15,7 +15,7 @@ export default function Services({ detailed = false }) {
         <div className="services-grid">
           {coreServices.map((s) => (
             <div className="card service-card" key={s.title}>
-              <div className="service-card__icon">{s.icon}</div>
+              <div className="service-card__icon"><s.icon size={28} strokeWidth={2} /></div>
               <h3>{s.title}</h3>
             </div>
           ))}

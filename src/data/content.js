@@ -1,3 +1,5 @@
+import { Shield, Tent, Camera, Search, GraduationCap, PackageSearch, Users } from 'lucide-react';
+
 // Central place for all copy + placeholder data.
 // Swap placeholder image URLs for real photos whenever you're ready —
 // nothing else in the components needs to change.
@@ -18,13 +20,13 @@ export const logoPlaceholder =
   'https://placehold.co/120x120/1B3A5C/D4A017?text=ASSL&font=oswald';
 
 export const coreServices = [
-  { icon: '🛡️', title: 'Security Guarding' },
-  { icon: '🎪', title: 'Events Security' },
-  { icon: '📹', title: 'CCTV Installations' },
-  { icon: '🔍', title: 'Private Investigations' },
-  { icon: '🎓', title: 'Security & Safety Trainings' },
-  { icon: '📦', title: 'Assets Recovery' },
-  { icon: '👥', title: 'Crowd Control' },
+  { icon: Shield, title: 'Security Guarding' },
+  { icon: Tent, title: 'Events Security' },
+  { icon: Camera, title: 'CCTV Installations' },
+  { icon: Search, title: 'Private Investigations' },
+  { icon: GraduationCap, title: 'Security & Safety Trainings' },
+  { icon: PackageSearch, title: 'Assets Recovery' },
+  { icon: Users, title: 'Crowd Control' },
 ];
 
 export const serviceDetails = [
