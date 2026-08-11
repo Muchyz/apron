@@ -1,3 +1,4 @@
+import { CheckCircle } from "lucide-react";
 import { Link } from 'react-router-dom';
 import { coreServices, serviceDetails } from '../data/content.js';
 
@@ -60,9 +61,18 @@ export default function Services({ detailed = false }) {
                     </ul>
                   )}
                   {svc.bullets && (
-                    <ul>
+                    <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "8px" }}>
                       {svc.bullets.map((b) => (
-                        <li key={b}>{b}</li>
+                        <li key={b} style={{ display: "flex", alignItems: "flex-start", gap: "8px" }}>
+                          <span style={{
+                            width: "18px", height: "18px", borderRadius: "50%",
+                            display: "flex", alignItems: "center", justifyContent: "center",
+                            background: "var(--red)", flexShrink: 0, marginTop: "2px"
+                          }}>
+                            <CheckCircle style={{ width: "11px", height: "11px", color: "#fff" }} strokeWidth={3} />
+                          </span>
+                          {b}
+                        </li>
                       ))}
                     </ul>
                   )}
