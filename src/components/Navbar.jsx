@@ -41,17 +41,6 @@ export default function Navbar() {
             src="/logo.png"
             alt="Apron Security Limited circular badge logo"
           />
-          <span className="navbar__brand-text">
-            <span className="navbar__brand-name">
-              <span className="navbar__brand-name-line navbar__brand-name-top">APRON SECURITY</span>
-              <span className="navbar__brand-name-line navbar__brand-name-bottom">
-                <span className="navbar__brand-rule"></span>
-                LIMITED
-                <span className="navbar__brand-rule"></span>
-              </span>
-            </span>
-            <span className="navbar__brand-tag">{company.tagline}</span>
-          </span>
         </Link>
 
         {/* Desktop nav — unchanged behaviour, just icons added */}
