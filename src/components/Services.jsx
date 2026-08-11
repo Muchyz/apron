@@ -61,14 +61,10 @@ export default function Services({ detailed = false }) {
                     </ul>
                   )}
                   {svc.bullets && (
-                    <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "8px" }}>
+                    <ul className="service-detail__bullets">
                       {svc.bullets.map((b) => (
-                        <li key={b} style={{ display: "flex", alignItems: "flex-start", gap: "8px" }}>
-                          <span style={{
-                            width: "18px", height: "18px", borderRadius: "50%",
-                            display: "flex", alignItems: "center", justifyContent: "center",
-                            background: "var(--red)", flexShrink: 0, marginTop: "2px"
-                          }}>
+                        <li key={b}>
+                          <span className="service-detail__bullet-icon">
                             <CheckCircle style={{ width: "11px", height: "11px", color: "#fff" }} strokeWidth={3} />
                           </span>
                           {b}

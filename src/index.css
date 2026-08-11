@@ -1954,15 +1954,15 @@ a:focus-visible, button:focus-visible {
   content: '\2713';
   position: absolute;
   left: 0;
-  top: 4px;
-  width: 18px;
-  height: 18px;
+  top: 3px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background: var(--red);
   color: var(--white);
-  font-size: 11px;
-  font-weight: 700;
-  line-height: 18px;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 20px;
   text-align: center;
 }
 .service-detail__checkicon {
@@ -2148,4 +2148,93 @@ a:focus-visible, button:focus-visible {
 /* ---------- Our Services page: reduce top gap since navy hero was removed ---------- */
 .our-services-page .section {
   padding-top: 24px;
+}
+
+
+/* ---------- Service cards: rotate accent color per card ---------- */
+:root {
+  --svc-green: #1a7a3c;
+  --svc-green-dark: #114f27;
+}
+
+/* Icon badge */
+.service-detail:nth-of-type(3n+2) .service-detail__icon {
+  background: linear-gradient(150deg, var(--navy) 0%, var(--navy-dark) 100%);
+}
+.service-detail:nth-of-type(3n+3) .service-detail__icon {
+  background: linear-gradient(150deg, var(--svc-green) 0%, var(--svc-green-dark) 100%);
+}
+
+/* Checklist checkmarks */
+.service-detail:nth-of-type(3n+2) .service-detail__checklist li::before {
+  background: var(--navy);
+}
+.service-detail:nth-of-type(3n+3) .service-detail__checklist li::before {
+  background: var(--svc-green);
+}
+
+/* Dash-style bullet list */
+.service-detail:nth-of-type(3n+2) .service-detail__body li::before {
+  color: var(--navy);
+}
+.service-detail:nth-of-type(3n+3) .service-detail__body li::before {
+  color: var(--svc-green);
+}
+
+/* Badge label (e.g. "Popular") */
+.service-detail:nth-of-type(3n+2) .service-detail__badge {
+  background: var(--navy);
+}
+.service-detail:nth-of-type(3n+3) .service-detail__badge {
+  background: var(--svc-green);
+}
+
+
+/* Left border color rotation to match card accent */
+.service-detail:nth-of-type(3n+2) {
+  border-left-color: var(--navy);
+}
+.service-detail:nth-of-type(3n+3) {
+  border-left-color: var(--svc-green);
+}
+
+
+/* ---------- Bullets list (audit-style services) ---------- */
+.service-detail__bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.service-detail__bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.service-detail__bullet-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--red);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.service-detail:nth-of-type(3n+2) .service-detail__bullet-icon {
+  background: var(--navy);
+}
+.service-detail:nth-of-type(3n+3) .service-detail__bullet-icon {
+  background: var(--svc-green);
+}
+
+
+/* Fix: force checklist checkmark text to stay white regardless of card color
+   (overrides accidental color bleed from .service-detail__body li::before rule) */
+.service-detail:nth-of-type(3n+2) .service-detail__checklist li::before,
+.service-detail:nth-of-type(3n+3) .service-detail__checklist li::before {
+  color: var(--white);
 }
