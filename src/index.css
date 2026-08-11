@@ -2139,3 +2139,8 @@ a:focus-visible, button:focus-visible {
   }
 }
 
+
+/* ---------- Our Services page: reduce top gap since navy hero was removed ---------- */
+.our-services-page .section {
+  padding-top: 24px;
+}
