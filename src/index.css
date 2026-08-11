@@ -1881,3 +1881,26 @@ a:focus-visible, button:focus-visible {
   opacity: 1;
   transform: translateY(0);
 }
+
+.hero__panel-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Stats cards: restored floating glass ---------- */
+.hero-stats {
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.28);
+}
+.hero-stats__item {
+  position: relative;
+}
+.hero-stats__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 20%;
+  bottom: 20%;
+  width: 1px;
+  background: rgba(255,255,255,0.2);
+}
