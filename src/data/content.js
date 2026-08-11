@@ -33,7 +33,7 @@ export const serviceDetails = [
   {
     id: 'guarding',
     title: 'Guarding Services',
-    image: 'https://placehold.co/640x420/1B3A5C/FFFFFF?text=Guarding+Services',
+    image: '/services/guarding.jpg',
     alt: 'Uniformed Apron Security guard on duty at a gatehouse',
     paragraphs: [
       "We have a stringent process of vetting and training our guards. We offer an intensive training program that covers: Protection and Preservation of assets, Incident Management, Counter Terrorism and customer Care Skills. Our guards are skilled on handling gatehouse duties, front office duties, Vehicle Inspection, Personal Searches, Perimeter and Car Park Controls and monitoring of CCTV. They are uniformed and fully equipped with Baton, LED Torch, and Whistle during their shifts.",
@@ -43,7 +43,7 @@ export const serviceDetails = [
   {
     id: 'cctv',
     title: 'CCTV Cameras',
-    image: 'https://placehold.co/640x420/1B3A5C/FFFFFF?text=CCTV+Cameras',
+    image: '/services/cctv.jpg',
     alt: 'CCTV camera installation on an exterior wall',
     paragraphs: [
       "We install and maintain Affordable and High-quality CCTV systems whether for your home or business. We offer both analogue and Internet protocol Cameras based on the client's preference. However, we will not hesitate to advice you on the best and latest technology. Our technical engineers recognize the importance of outlook of installation and therefore ensure absolute coverage for your security. We use recognized brands that are effective and user-friendly.",
@@ -52,7 +52,7 @@ export const serviceDetails = [
   {
     id: 'alarm',
     title: 'Intruder Alarm System',
-    image: 'https://placehold.co/640x420/1B3A5C/FFFFFF?text=Intruder+Alarm+System',
+    image: '/services/alarm.jpg',
     alt: 'Intruder alarm control panel mounted on a wall',
     paragraphs: [
       "In a world of increasing insecurity at homes and offices, it's now important to install an Intruder Alarm System. The Intruder Alarm System units are available from 8 to 128 zones. State of the art equipment can be installed to meet every need and budget, from basic window and door sensors all the way to motion detectors.",
@@ -61,7 +61,7 @@ export const serviceDetails = [
   {
     id: 'access-control',
     title: 'Access Control',
-    image: 'https://placehold.co/640x420/1B3A5C/FFFFFF?text=Access+Control',
+    image: '/services/access-control.jpg',
     alt: 'Biometric access control reader at an office entrance',
     paragraphs: [
       "We acknowledge every organization's need to manage access to their premise, information, equipment as well as the security of their employees and visitors. It is essential to manage and monitor who has access to what office, records, entry and exit. With these systems, you are able to restrict entrance to places and hence able to determine who is where and when. This minimizes dangerous incidents, frauds or theft from occurring. If you are looking for any system from biometric time and attendance systems, computerized time recording solutions for flexi time workers or simply a traditional time recording machine, then we have the answers for you!!",
@@ -70,7 +70,7 @@ export const serviceDetails = [
   {
     id: 'perimeter',
     title: 'Perimeter Security (Electric & Razor Wire)',
-    image: 'https://placehold.co/640x420/1B3A5C/FFFFFF?text=Perimeter+Security',
+    image: '/services/perimeter.png',
     alt: 'Electric perimeter fence along a property boundary',
     paragraphs: [
       'Protecting of the perimeter fence is the first line of defense in asset and lives security. We undertake installation of electric and razor fences while maintaining high quality standard materials. Security barriers can be automatic or manual and equipped with booms which are resistant to FORCEFUL ACCESS.',
@@ -79,7 +79,7 @@ export const serviceDetails = [
   {
     id: 'consultancy',
     title: 'Security Consultancy',
-    image: 'https://placehold.co/640x420/1B3A5C/FFFFFF?text=Security+Consultancy',
+    image: '/services/consultancy.jpg',
     alt: 'Security consultant reviewing a site audit report',
     paragraphs: [
       "Even if you have had security measures in place for many years and believe you've covered all the bases, it pays to have an independent security audit. From commercial buildings to shopping malls, offices and factories to hotels and private homes, we compile comprehensive, clear reports that will leave you free to decide on your next steps. We will:",

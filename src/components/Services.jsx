@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { coreServices, serviceDetails } from '../data/content.js';
 
 // `detailed` controls whether the full sub-sections (Guarding, CCTV, Alarm, etc.)
@@ -20,6 +21,13 @@ export default function Services({ detailed = false }) {
             </div>
           ))}
         </div>
+
+          <div style={{ textAlign: 'center', marginTop: '30px' }}>
+            <Link to="/our-services" className="btn btn--primary">
+              View All Services
+            </Link>
+          </div>
+        )}
 
         {detailed && (
           <div style={{ marginTop: '54px' }}>
