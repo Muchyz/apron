@@ -1,3 +1,4 @@
+import { Phone, Mail, MapPin, Building2, Hash } from 'lucide-react';
 import { company } from '../data/content.js';
 import ContactForm from './ContactForm.jsx';
 
@@ -11,35 +12,53 @@ export default function ContactSection() {
         </h2>
 
         <div className="contact-grid">
-          <div>
+          <div className="card contact-info-card">
             <ul className="contact-info">
               <li>
-                <b>Phone:</b>
-                <span>&nbsp;{company.phones.join(' / ')}</span>
+                <span className="contact-info__icon"><Phone size={18} /></span>
+                <div>
+                  <b>Phone</b>
+                  <span>{company.phones.join(' / ')}</span>
+                </div>
               </li>
               <li>
-                <b>Email:</b>
-                <span>&nbsp;{company.email}</span>
+                <span className="contact-info__icon"><Mail size={18} /></span>
+                <div>
+                  <b>Email</b>
+                  <span>{company.email}</span>
+                </div>
               </li>
               <li>
-                <b>P.O Box:</b>
-                <span>&nbsp;{company.poBox}</span>
+                <span className="contact-info__icon"><MapPin size={18} /></span>
+                <div>
+                  <b>P.O Box</b>
+                  <span>{company.poBox}</span>
+                </div>
               </li>
               <li>
-                <b>Head Office:</b>
-                <span>&nbsp;{company.headOffice}</span>
+                <span className="contact-info__icon"><Building2 size={18} /></span>
+                <div>
+                  <b>Head Office</b>
+                  <span>{company.headOffice}</span>
+                </div>
               </li>
               <li>
-                <b>Embu Branch:</b>
-                <span>&nbsp;{company.branchOffice}</span>
+                <span className="contact-info__icon"><Building2 size={18} /></span>
+                <div>
+                  <b>Embu Branch</b>
+                  <span>{company.branchOffice}</span>
+                </div>
               </li>
               <li>
-                <b>Follow &amp; Tag:</b>
-                <span>&nbsp;{company.hashtag}</span>
+                <span className="contact-info__icon"><Hash size={18} /></span>
+                <div>
+                  <b>Follow &amp; Tag</b>
+                  <span>{company.hashtag}</span>
+                </div>
               </li>
             </ul>
           </div>
-          <div>
+          <div className="card contact-form-card">
             <ContactForm />
           </div>
         </div>

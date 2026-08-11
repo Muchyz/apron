@@ -46,7 +46,7 @@ export default function Footer() {
             © {year} {company.name}. All rights reserved.
           </span>
           <span>
-            {company.domain} &nbsp;·&nbsp; <span className="footer-hashtag">{company.hashtag}</span>
+            <span className="footer-hashtag">{company.hashtag}</span>
           </span>
         </div>
       </div>

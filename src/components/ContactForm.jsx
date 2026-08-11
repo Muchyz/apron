@@ -30,9 +30,6 @@ export default function ContactForm() {
       <button type="submit" className="btn btn--red">
         Submit
       </button>
-      <p className="contact-form__note">
-        This form is a UI placeholder — connect it to your email or CRM when ready.
-      </p>
     </form>
   );
 }
