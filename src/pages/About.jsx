@@ -9,7 +9,7 @@ import Divider from '../components/Divider.jsx';
 export default function AboutPage() {
   return (
     <main>
-      <div className="page-hero">
+      <div className="page-hero page-hero--about">
         <div className="container">
           <span className="section-eyebrow">Get To Know Us</span>
           <h1>About Apron Security</h1>

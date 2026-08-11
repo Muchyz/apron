@@ -1576,3 +1576,12 @@ a:focus-visible, button:focus-visible {
   color: var(--red);
   margin-top: 1px;
 }
+
+/* ---------- About page hero background ---------- */
+.page-hero--about {
+  position: relative;
+  background: linear-gradient(180deg, rgba(11, 29, 51, 0.75) 0%, rgba(11, 29, 51, 0.88) 100%),
+    url('/about-hero.jpg');
+  background-size: cover;
+  background-position: center;
+}
