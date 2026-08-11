@@ -58,7 +58,7 @@ export default function Services({ detailed = false }) {
                       {svc.highlights.map((h) => (
                         <li key={h}>
                           <span className="service-detail__checkbadge">
-                            <Check size={13} strokeWidth={3.5} />
+                            <Check size={13} strokeWidth={3} />
                           </span>
                           <span>{h}</span>
                         </li>

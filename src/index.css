@@ -1469,8 +1469,9 @@ a:focus-visible, button:focus-visible {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: #16a34a;
-  color: var(--white);
+  background: transparent;
+  border: 1.5px solid var(--red);
+  color: var(--red);
   display: flex;
   align-items: center;
   justify-content: center;
