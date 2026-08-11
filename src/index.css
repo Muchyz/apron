@@ -1457,25 +1457,23 @@ a:focus-visible, button:focus-visible {
   padding: 0;
 }
 .service-detail__checklist li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 6px 0;
+  position: relative;
+  padding: 6px 0 6px 18px;
   color: var(--gray-body);
   font-size: 0.92rem;
 }
-.service-detail__checkbadge {
-  flex-shrink: 0;
-  width: 22px;
-  height: 22px;
+.service-detail__checklist li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  background: transparent;
-  border: 1.5px solid var(--red);
-  color: var(--red);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1px;
-  line-height: 0;
+  background: var(--gray-body);
 }
-.service-detail__checkbadge svg { display: block; }
+.service-detail__checkicon {
+  flex-shrink: 0;
+  color: var(--red);
+  margin-top: 1px;
+}

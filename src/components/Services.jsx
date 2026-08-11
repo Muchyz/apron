@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { Check } from 'lucide-react';
 import { coreServices, serviceDetails } from '../data/content.js';
 
 // `detailed` controls whether the full sub-sections (Guarding, CCTV, Alarm, etc.)
@@ -56,12 +55,7 @@ export default function Services({ detailed = false }) {
                   {svc.highlights && (
                     <ul className="service-detail__checklist">
                       {svc.highlights.map((h) => (
-                        <li key={h}>
-                          <span className="service-detail__checkbadge">
-                            <Check size={13} strokeWidth={3} />
-                          </span>
-                          <span>{h}</span>
-                        </li>
+                        <li key={h}>{h}</li>
                       ))}
                     </ul>
                   )}
