@@ -9,8 +9,11 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div>
-            <div className="footer-brand-name">{company.name}</div>
-            <div className="footer-tag">{company.tagline}</div>
+            <img
+              className="footer-logo"
+              src="/logo.png"
+              alt="Apron Security Limited circular badge logo"
+            />
             <p style={{ fontSize: '0.9rem' }}>
               Protecting people, property, and assets across Nairobi and Embu with
               trained, disciplined, and vetted security personnel.

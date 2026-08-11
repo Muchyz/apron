@@ -22,7 +22,6 @@ export default function Gallery() {
               aria-label={`Enlarge image: ${img.caption}`}
             >
               <img src={img.src} alt={img.caption} loading="lazy" />
-              <span className="gallery-item__caption">{img.caption}</span>
             </button>
           ))}
         </div>
