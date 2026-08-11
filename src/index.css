@@ -1946,19 +1946,24 @@ a:focus-visible, button:focus-visible {
 }
 .service-detail__checklist li {
   position: relative;
-  padding: 6px 0 6px 18px;
+  padding: 4px 0 4px 28px;
   color: var(--gray-body);
   font-size: 0.92rem;
 }
 .service-detail__checklist li::before {
-  content: '';
+  content: '\2713';
   position: absolute;
   left: 0;
-  top: 14px;
-  width: 6px;
-  height: 6px;
+  top: 4px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  background: var(--gray-body);
+  background: var(--red);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
 }
 .service-detail__checkicon {
   flex-shrink: 0;
