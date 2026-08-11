@@ -7,7 +7,7 @@ import CoreValues from '../components/CoreValues.jsx';
 import Personnel from '../components/Personnel.jsx';
 import TrainingStandards from '../components/TrainingStandards.jsx';
 import Services from '../components/Services.jsx';
-import Gallery from '../components/Gallery.jsx';
+import GalleryPreview from '../components/GalleryPreview.jsx';
 import Testimonials from '../components/Testimonials.jsx';
 import Clients from '../components/Clients.jsx';
 import FAQ from '../components/FAQ.jsx';
@@ -43,7 +43,7 @@ export default function Home() {
       <Services detailed={false} />
       <Divider />
 
-      <Gallery />
+      <GalleryPreview />
       <Divider />
 
       <Testimonials />
