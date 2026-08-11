@@ -22,6 +22,7 @@ export default function Services({ detailed = false }) {
           ))}
         </div>
 
+        {detailed === false && (
           <div style={{ textAlign: 'center', marginTop: '30px' }}>
             <Link to="/our-services" className="btn btn--primary">
               View All Services
