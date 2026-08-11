@@ -1,4 +1,4 @@
-import { Shield, Tent, Camera, Search, GraduationCap, PackageSearch, Users } from 'lucide-react';
+import { Shield, Tent, Camera, Search, GraduationCap, PackageSearch, Users, Bell, Fingerprint, Zap, ClipboardCheck, Check } from 'lucide-react';
 
 // Central place for all copy + placeholder data.
 // Swap placeholder image URLs for real photos whenever you're ready —
@@ -32,8 +32,16 @@ export const coreServices = [
 export const serviceDetails = [
   {
     id: 'guarding',
+    icon: Shield,
     title: 'Guarding Services',
     image: '/services/guarding.jpg',
+    badge: 'Most Popular',
+    highlights: [
+      'Uniformed & fully equipped officers',
+      'Intensive vetting and training',
+      'Shift changes at 6AM and 6PM daily',
+      '24/7 emergency response with Police liaison',
+    ],
     alt: 'Uniformed Apron Security guard on duty at a gatehouse',
     paragraphs: [
       "We have a stringent process of vetting and training our guards. We offer an intensive training program that covers: Protection and Preservation of assets, Incident Management, Counter Terrorism and customer Care Skills. Our guards are skilled on handling gatehouse duties, front office duties, Vehicle Inspection, Personal Searches, Perimeter and Car Park Controls and monitoring of CCTV. They are uniformed and fully equipped with Baton, LED Torch, and Whistle during their shifts.",
@@ -42,8 +50,15 @@ export const serviceDetails = [
   },
   {
     id: 'cctv',
+    icon: Camera,
     title: 'CCTV Cameras',
     image: '/services/cctv.jpg',
+    highlights: [
+      'Analogue and IP camera options',
+      'Tailored to your budget and preference',
+      'Professional installation and setup',
+      'Ongoing maintenance support',
+    ],
     alt: 'CCTV camera installation on an exterior wall',
     paragraphs: [
       "We install and maintain Affordable and High-quality CCTV systems whether for your home or business. We offer both analogue and Internet protocol Cameras based on the client's preference. However, we will not hesitate to advice you on the best and latest technology. Our technical engineers recognize the importance of outlook of installation and therefore ensure absolute coverage for your security. We use recognized brands that are effective and user-friendly.",
@@ -51,8 +66,15 @@ export const serviceDetails = [
   },
   {
     id: 'alarm',
+    icon: Bell,
     title: 'Intruder Alarm System',
     image: '/services/alarm.jpg',
+    highlights: [
+      'Instant intrusion alerts',
+      'Automatic or manual control',
+      'Quality, durable components',
+      'Linked to rapid response team',
+    ],
     alt: 'Intruder alarm control panel mounted on a wall',
     paragraphs: [
       "In a world of increasing insecurity at homes and offices, it's now important to install an Intruder Alarm System. The Intruder Alarm System units are available from 8 to 128 zones. State of the art equipment can be installed to meet every need and budget, from basic window and door sensors all the way to motion detectors.",
@@ -60,8 +82,15 @@ export const serviceDetails = [
   },
   {
     id: 'access-control',
+    icon: Fingerprint,
     title: 'Access Control',
     image: '/services/access-control.jpg',
+    highlights: [
+      'Biometric and card-based options',
+      'Time and attendance tracking',
+      'Restrict entry by zone or level',
+      'Reduces theft and unauthorized access',
+    ],
     alt: 'Biometric access control reader at an office entrance',
     paragraphs: [
       "We acknowledge every organization's need to manage access to their premise, information, equipment as well as the security of their employees and visitors. It is essential to manage and monitor who has access to what office, records, entry and exit. With these systems, you are able to restrict entrance to places and hence able to determine who is where and when. This minimizes dangerous incidents, frauds or theft from occurring. If you are looking for any system from biometric time and attendance systems, computerized time recording solutions for flexi time workers or simply a traditional time recording machine, then we have the answers for you!!",
@@ -69,8 +98,15 @@ export const serviceDetails = [
   },
   {
     id: 'perimeter',
+    icon: Zap,
     title: 'Perimeter Security (Electric & Razor Wire)',
     image: '/services/perimeter.png',
+    highlights: [
+      'Electric and razor wire fencing',
+      'High quality standard materials',
+      'Automatic or manual barriers',
+      'Resistant to forceful access',
+    ],
     alt: 'Electric perimeter fence along a property boundary',
     paragraphs: [
       'Protecting of the perimeter fence is the first line of defense in asset and lives security. We undertake installation of electric and razor fences while maintaining high quality standard materials. Security barriers can be automatic or manual and equipped with booms which are resistant to FORCEFUL ACCESS.',
@@ -78,8 +114,15 @@ export const serviceDetails = [
   },
   {
     id: 'consultancy',
+    icon: ClipboardCheck,
     title: 'Security Consultancy',
     image: '/services/consultancy.jpg',
+    highlights: [
+      'Independent security audits',
+      'Clear, comprehensive reports',
+      'Covers homes, offices, and institutions',
+      'Actionable next-step recommendations',
+    ],
     alt: 'Security consultant reviewing a site audit report',
     paragraphs: [
       "Even if you have had security measures in place for many years and believe you've covered all the bases, it pays to have an independent security audit. From commercial buildings to shopping malls, offices and factories to hotels and private homes, we compile comprehensive, clear reports that will leave you free to decide on your next steps. We will:",

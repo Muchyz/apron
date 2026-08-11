@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Check } from 'lucide-react';
 import { coreServices, serviceDetails } from '../data/content.js';
 
 // `detailed` controls whether the full sub-sections (Guarding, CCTV, Alarm, etc.)
@@ -35,15 +36,35 @@ export default function Services({ detailed = false }) {
             {serviceDetails.map((svc) => (
               <div className="service-detail" key={svc.id} id={svc.id}>
                 <div className="service-detail__img">
+                  {svc.badge && (
+                    <span className="service-detail__badge">{svc.badge}</span>
+                  )}
                   <img src={svc.image} alt={svc.alt} />
                 </div>
                 <div className="service-detail__body">
-                  <h3 className="section-heading section-heading--navy" style={{ fontSize: '1.35rem' }}>
-                    {svc.title}
-                  </h3>
+                  <div className="service-detail__title-row">
+                    <div className="service-detail__icon">
+                      <svc.icon size={24} strokeWidth={2} />
+                    </div>
+                    <h3 className="section-heading section-heading--navy" style={{ fontSize: '1.35rem', margin: 0 }}>
+                      {svc.title}
+                    </h3>
+                  </div>
                   {svc.paragraphs.map((p, i) => (
                     <p key={i}>{p}</p>
                   ))}
+                  {svc.highlights && (
+                    <ul className="service-detail__checklist">
+                      {svc.highlights.map((h) => (
+                        <li key={h}>
+                          <span className="service-detail__checkbadge">
+                            <Check size={13} strokeWidth={3.5} />
+                          </span>
+                          <span>{h}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                   {svc.bullets && (
                     <ul>
                       {svc.bullets.map((b) => (
