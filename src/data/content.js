@@ -116,21 +116,23 @@ export const whyChooseUs = [
   'Commitment to quality service delivery',
 ];
 
-export const galleryCategories = ['All', 'Guarding', 'CCTV & Alarms', 'Events', 'Training'];
-
 export const galleryImages = [
-  { id: 1, category: 'Guarding', src: 'https://picsum.photos/seed/apron-guard1/600/450', alt: 'Security guard patrolling a client compound' },
-  { id: 2, category: 'Guarding', src: 'https://picsum.photos/seed/apron-guard2/600/450', alt: 'Guard stationed at a gatehouse entrance' },
-  { id: 3, category: 'Guarding', src: 'https://picsum.photos/seed/apron-guard3/600/450', alt: 'Security officer inspecting a visitor vehicle' },
-  { id: 4, category: 'CCTV & Alarms', src: 'https://picsum.photos/seed/apron-cctv1/600/450', alt: 'CCTV camera mounted on an exterior wall' },
-  { id: 5, category: 'CCTV & Alarms', src: 'https://picsum.photos/seed/apron-cctv2/600/450', alt: 'Technician installing a CCTV camera' },
-  { id: 6, category: 'CCTV & Alarms', src: 'https://picsum.photos/seed/apron-alarm1/600/450', alt: 'Intruder alarm control panel' },
-  { id: 7, category: 'Events', src: 'https://picsum.photos/seed/apron-event1/600/450', alt: 'Guards providing crowd control at an event' },
-  { id: 8, category: 'Events', src: 'https://picsum.photos/seed/apron-event2/600/450', alt: 'Security team managing entrance at a public event' },
-  { id: 9, category: 'Training', src: 'https://picsum.photos/seed/apron-train1/600/450', alt: 'Security guards in a training session' },
-  { id: 10, category: 'Training', src: 'https://picsum.photos/seed/apron-train2/600/450', alt: 'Instructor demonstrating first aid procedures' },
-  { id: 11, category: 'Guarding', src: 'https://picsum.photos/seed/apron-guard4/600/450', alt: 'Guard performing a perimeter patrol at night' },
-  { id: 12, category: 'CCTV & Alarms', src: 'https://picsum.photos/seed/apron-cctv3/600/450', alt: 'Control room monitor displaying CCTV feeds' },
+  { id: 1, src: '/gallery/photo-01.jpg', caption: 'Guards on parade at the compound gate' },
+  { id: 2, src: '/gallery/photo-02.jpg', caption: 'Guard team on assignment at a client resort' },
+  { id: 3, src: '/gallery/photo-03.jpg', caption: 'Guard stationed at a client gate' },
+  { id: 4, src: '/gallery/photo-04.jpg', caption: 'Guards on duty at a protected client site' },
+  { id: 5, src: '/gallery/photo-05.jpg', caption: 'Guard team stationed at the entrance' },
+  { id: 6, src: '/gallery/photo-06.jpg', caption: 'Officers on patrol with security equipment' },
+  { id: 7, src: '/gallery/photo-07.jpg', caption: 'Guards on parade formation' },
+  { id: 8, src: '/gallery/photo-08.jpg', caption: 'Officers saluting during an official visit' },
+  { id: 9, src: '/gallery/photo-09.jpg', caption: 'Guard team saluting at a ceremony' },
+  { id: 10, src: '/gallery/photo-10.jpg', caption: 'Officers standing at attention during a visit' },
+  { id: 11, src: '/gallery/photo-11.jpg', caption: 'Guard team with a client at the gate' },
+  { id: 12, src: '/gallery/photo-12.jpg', caption: 'Guards in drill formation' },
+  { id: 13, src: '/gallery/photo-13.jpg', caption: 'Officers on parade during drill practice' },
+  { id: 14, src: '/gallery/photo-14.jpg', caption: 'Officer on duty at the office' },
+  { id: 15, src: '/gallery/photo-15.jpg', caption: 'Guards marching in formation' },
+  { id: 16, src: '/gallery/photo-16.jpg', caption: 'Guard on duty at a client facility' },
 ];
 
 export const testimonials = [
@@ -202,7 +204,7 @@ export const faqs = [
 export const director = {
   name: 'Zachary Mbogo',
   title: 'Founder & Managing Director, Apron Security Services Limited',
-  photo: 'https://placehold.co/360x420/1B3A5C/FFFFFF?text=Zachary+Mbogo',
+  photo: '/director-photo.jpg',
   message: [
     'At Apron Security Services Limited, we believe that effective security is built on professionalism, integrity, preparedness and trust.',
     'With over 10 years of experience in the private security sector, I have risen through the ranks, gaining extensive hands-on experience in security operations, risk management, personnel management and the delivery of professional security solutions.',

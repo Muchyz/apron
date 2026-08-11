@@ -5,7 +5,7 @@ export default function DirectorMessage() {
     <section className="section" id="director-message">
       <div className="container director">
         <div className="director__photo">
-          <img src={director.photo} alt={`Portrait of ${director.name}, ${director.title}`} />
+          <img src={director.photo} alt={`Portrait of ${director.name}, ${director.title}`} style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '16px' }} />
         </div>
         <div>
           <span className="director__quote-mark">&ldquo;</span>

@@ -4,8 +4,9 @@ export default function Personnel() {
       <div className="container personnel">
         <div className="personnel__img">
           <img
-            src="https://placehold.co/560x420/1B3A5C/FFFFFF?text=Our+Personnel"
+            src="/team-photo.jpg"
             alt="Vetted Apron Security personnel lined up for inspection"
+            style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '16px' }}
           />
         </div>
         <div>
