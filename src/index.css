@@ -3569,3 +3569,75 @@ a:focus-visible, button:focus-visible {
   background: linear-gradient(90deg, var(--red) 0%, #e8c25a 100%);
   border-radius: 2px;
 }
+
+/* ---------- Ribbon CTA Banner ---------- */
+.ribbon-cta {
+  position: relative;
+  background: linear-gradient(90deg, var(--red) 0%, #d92323 100%);
+  padding: 22px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: -40px auto 0;
+  z-index: 3;
+}
+.ribbon-cta::before,
+.ribbon-cta::after {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.ribbon-cta::before {
+  left: 0;
+  border-width: 14px 14px 0 0;
+  border-color: #8f1414 transparent transparent transparent;
+}
+.ribbon-cta::after {
+  right: 0;
+  border-width: 14px 0 0 14px;
+  border-color: #8f1414 transparent transparent transparent;
+}
+.ribbon-cta__text {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+}
+.ribbon-cta__text svg {
+  flex-shrink: 0;
+}
+.ribbon-cta__button {
+  background: var(--white);
+  color: var(--red);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: none;
+  white-space: nowrap;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.ribbon-cta__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+@media (max-width: 560px) {
+  .ribbon-cta {
+    margin-top: -24px;
+    padding: 18px 20px;
+    justify-content: center;
+    text-align: center;
+  }
+  .ribbon-cta__text { justify-content: center; }
+}
