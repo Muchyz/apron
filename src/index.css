@@ -2614,60 +2614,72 @@ a:focus-visible, button:focus-visible {
 }
 
 
-/* ---------- Core Values: icon card grid ---------- */
-.value-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+/* ---------- Core Values: minimal professional list ---------- */
+.values-section-v4 {
+  background: var(--white);
 }
-@media (max-width: 760px) {
-  .value-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 480px) {
-  .value-grid { grid-template-columns: 1fr; }
-}
-.value-card {
+.values-list-v4 {
   display: flex;
   flex-direction: column;
+}
+.values-list-v4__row {
+  position: relative;
+  display: flex;
   align-items: center;
-  text-align: center;
-  gap: 12px;
-  background: var(--white);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-card);
-  border-top: 3px solid var(--red);
-  padding: 26px 16px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  gap: 24px;
+  padding: 26px 4px;
+  border-bottom: 1px solid rgba(11,29,51,0.08);
+  transition: padding-left 0.3s ease;
 }
-.value-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-card-hover);
+.values-list-v4__row:first-child { border-top: 1px solid rgba(11,29,51,0.08); }
+.values-list-v4__row:hover { padding-left: 14px; }
+.values-list-v4__num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: rgba(11,29,51,0.32);
+  min-width: 32px;
+  letter-spacing: 0.02em;
 }
-.value-card:nth-child(3n+2) { border-top-color: var(--navy); }
-.value-card:nth-child(3n+3) { border-top-color: var(--svc-green); }
-.value-card__icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
+.values-list-v4__icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(150deg, var(--red) 0%, #8a0000 100%);
-  color: var(--white);
-  box-shadow: 0 6px 14px rgba(179,0,0,0.3);
-}
-.value-card:nth-child(3n+2) .value-card__icon {
   background: linear-gradient(150deg, var(--navy) 0%, var(--navy-dark) 100%);
-  box-shadow: 0 6px 14px rgba(20,40,60,0.35);
+  color: #e8c25a;
+  transition: transform 0.3s ease;
 }
-.value-card:nth-child(3n+3) .value-card__icon {
-  background: linear-gradient(150deg, var(--svc-green) 0%, var(--svc-green-dark) 100%);
-  box-shadow: 0 6px 14px rgba(26,122,60,0.35);
+.values-list-v4__row:hover .values-list-v4__icon {
+  transform: rotate(-6deg) scale(1.05);
 }
-.value-card span {
-  font-weight: 600;
+.values-list-v4__label {
+  flex: 1;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
   color: var(--navy);
-  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+}
+.values-list-v4__underline {
+  position: absolute;
+  bottom: -1px;
+  left: 4px;
+  height: 2px;
+  width: 0;
+  background: var(--red);
+  transition: width 0.35s ease;
+}
+.values-list-v4__row:hover .values-list-v4__underline {
+  width: 60px;
+}
+@media (max-width: 560px) {
+  .values-list-v4__row { gap: 16px; padding: 20px 2px; }
+  .values-list-v4__icon { width: 38px; height: 38px; }
+  .values-list-v4__label { font-size: 1rem; }
 }
 
 /* ---------- Training standards: icon card list ---------- */
