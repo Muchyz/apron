@@ -40,7 +40,7 @@ export default function Home() {
       <Divider />
 
       {/* Homepage shows the overview cards; full write-up lives on /our-services */}
-      <Services detailed={false} />
+      <Services detailed={true} />
       <Divider />
 
       <GalleryPreview />

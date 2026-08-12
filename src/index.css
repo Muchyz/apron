@@ -3004,3 +3004,39 @@ a:focus-visible, button:focus-visible {
   .about-photo { padding: 10px 0 26px 10px; }
   .about-photo__badge { bottom: -14px; left: 20px; font-size: 0.65rem; padding: 8px 14px; }
 }
+
+/* ---------- Scroll to top button ---------- */
+.scroll-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 96px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(150deg, var(--navy) 0%, var(--navy-dark) 100%);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(11,29,51,0.35);
+  cursor: pointer;
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(10px) scale(0.9);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.25s ease;
+}
+.scroll-to-top--visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+.scroll-to-top:hover {
+  background: linear-gradient(150deg, var(--red) 0%, var(--red-dark) 100%);
+  color: var(--white);
+  transform: translateY(-3px) scale(1.05);
+}
+@media (max-width: 480px) {
+  .scroll-to-top { right: 18px; bottom: 88px; width: 42px; height: 42px; }
+}
