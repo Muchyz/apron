@@ -3673,12 +3673,21 @@ a:focus-visible, button:focus-visible {
   gap: 12px;
   margin-top: 0;
 }
-#certifications .section-heading__icon {
+#certifications .section-heading__icon-wrap {
   flex-shrink: 0;
-  width: 28px;
-  height: 28px;
-  color: var(--red);
-  margin-top: 8px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4px;
+}
+#certifications .section-heading__icon {
+  width: 22px;
+  height: 22px;
+  color: var(--white);
 }
 #certifications .section-heading__text {
   display: block;

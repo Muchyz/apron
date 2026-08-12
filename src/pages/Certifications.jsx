@@ -84,7 +84,9 @@ export default function CertificationsPage() {
       <section className="section" id="certifications">
         <div className="container">
           <h2 className="section-heading section-heading--with-icon">
-            <ShieldCheck size={28} className="section-heading__icon" />
+            <span className="section-heading__icon-wrap">
+              <ShieldCheck className="section-heading__icon" />
+            </span>
             <span className="section-heading__text">
               Registered, <span className="accent">Licensed</span> &amp; Compliant
             </span>
