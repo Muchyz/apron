@@ -3376,3 +3376,97 @@ a:focus-visible, button:focus-visible {
 .contact-section {
   padding-top: 8px;
 }
+
+/* ---------- Certifications ---------- */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 900px) { .cert-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .cert-grid { grid-template-columns: 1fr; } }
+
+.cert-card {
+  border: none;
+  padding: 0;
+  text-align: left;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(11,29,51,0.18);
+}
+.cert-card__thumb {
+  aspect-ratio: 4 / 5;
+  background: var(--gray-light);
+  overflow: hidden;
+}
+.cert-card__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.cert-card__body {
+  padding: 16px 18px 20px;
+}
+.cert-card__body h3 {
+  font-size: 1rem;
+  color: var(--navy);
+  margin: 0 0 6px;
+}
+.cert-card__issuer {
+  font-size: 0.82rem;
+  color: var(--text-muted, #64748b);
+  margin: 0 0 4px;
+}
+.cert-card__ref {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--gold, #b8860b);
+  margin: 0;
+}
+
+.cert-lightbox__panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: min(500px, 92vw);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.cert-lightbox__panel img {
+  max-width: 100%;
+  max-height: 60vh;
+  border-radius: var(--radius-md);
+  object-fit: contain;
+  background: var(--white);
+}
+.cert-lightbox__caption {
+  background: var(--white);
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  margin-top: 14px;
+  width: 100%;
+  text-align: left;
+}
+.cert-lightbox__caption h3 {
+  color: var(--navy);
+  margin: 0 0 6px;
+}
+.cert-lightbox__caption p {
+  margin: 0 0 4px;
+  font-size: 0.88rem;
+  color: var(--text-muted, #475569);
+}
+.cert-lightbox__detail {
+  margin-top: 8px !important;
+  line-height: 1.5;
+}
