@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { ShieldCheck } from 'lucide-react';
 
 const certifications = [
@@ -51,10 +51,30 @@ const certifications = [
 
 export default function CertificationsPage() {
   const [active, setActive] = useState(null);
+  const [visible, setVisible] = useState(false);
+  const gridRef = useRef(null);
+
+  useEffect(() => {
+    const el = gridRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1, rootMargin: '-10% 0px -10% 0px' }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <main>
-      <div className="page-hero">
+      <div className="page-hero page-hero--certifications">
         <div className="container">
           <span className="section-eyebrow">Fully Licensed &amp; Compliant</span>
           <h1>Certifications &amp; Licensing</h1>
@@ -74,7 +94,7 @@ export default function CertificationsPage() {
             in full.
           </p>
 
-          <div className="cert-grid">
+          <div className={`cert-grid${visible ? ' cert-grid--visible' : ''}`} ref={gridRef}>
             {certifications.map((cert) => (
               <button
                 key={cert.id}
@@ -84,6 +104,9 @@ export default function CertificationsPage() {
               >
                 <div className="cert-card__thumb">
                   <img src={cert.img} alt={cert.title} loading="lazy" />
+                  <span className="cert-card__badge">
+                    <ShieldCheck size={16} />
+                  </span>
                 </div>
                 <div className="cert-card__body">
                   <h3>{cert.title}</h3>
