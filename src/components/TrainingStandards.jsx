@@ -6,20 +6,22 @@ export default function TrainingStandards() {
       <div className="container">
         <span className="section-eyebrow">Consistently Prepared</span>
         <h2 className="section-heading">Security Training Standards</h2>
-        <p className="section-intro" style={{ marginBottom: '30px' }}>
+        <p className="section-intro" style={{ marginBottom: '40px' }}>
           Apron Security Services Limited maintains strict training standards to ensure
           all security personnel are competent, disciplined, and capable of handling
           modern security challenges. Our guards undergo training in the following areas:
         </p>
-        <ul className="training-list">
-          {trainingStandards.map((item) => (
-            <li key={item.label}>
-              <span>
-                <b>{item.label}</b> — {item.desc}
-              </span>
-            </li>
+        <div className="timeline">
+          {trainingStandards.map((item, i) => (
+            <div className="timeline__step" key={item.label}>
+              <div className="timeline__marker">{i + 1}</div>
+              <div className="timeline__content">
+                <b>{item.label}</b>
+                <p>{item.desc}</p>
+              </div>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   );
