@@ -83,11 +83,13 @@ export default function CertificationsPage() {
 
       <section className="section" id="certifications">
         <div className="container">
-          <span className="section-eyebrow">
-            <ShieldCheck size={16} style={{ marginRight: '6px' }} />
-            Verified Credentials
-          </span>
-          <h2 className="section-heading">Registered, Licensed &amp; Compliant</h2>
+          <h2 className="section-heading section-heading--with-icon">
+            <ShieldCheck size={28} className="section-heading__icon" />
+            <span className="section-heading__text">
+              Registered, <span className="accent">Licensed</span> &amp; Compliant
+            </span>
+          </h2>
+          <span className="section-eyebrow section-eyebrow--plain">Verified Credentials</span>
           <p className="section-intro" style={{ marginBottom: '30px' }}>
             Apron Security Services Limited operates as a fully registered corporate
             private security provider in Kenya. Tap any certificate below to view it

@@ -3641,3 +3641,68 @@ a:focus-visible, button:focus-visible {
   }
   .ribbon-cta__text { justify-content: center; }
 }
+
+/* ---------- Certifications Section Heading ---------- */
+#certifications .section-heading {
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  color: var(--navy);
+  font-size: clamp(1.8rem, 4.2vw, 2.6rem);
+  line-height: 1.15;
+}
+#certifications .section-heading .accent {
+  color: #b8860b;
+  font-style: italic;
+}
+#certifications .section-heading::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin-top: 14px;
+  background: linear-gradient(90deg, var(--red) 0%, #e8c25a 100%);
+  border-radius: 2px;
+}
+
+/* ---------- Certifications Heading/Eyebrow Swap ---------- */
+#certifications .section-heading--with-icon {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 0;
+}
+#certifications .section-heading__icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  color: var(--red);
+  margin-top: 8px;
+}
+#certifications .section-heading__text {
+  display: block;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+#certifications .section-heading--with-icon::after {
+  content: none;
+}
+
+@media (max-width: 480px) {
+  #certifications .section-heading--with-icon {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+  #certifications .section-heading__icon {
+    width: 22px;
+    height: 22px;
+    margin-top: 6px;
+  }
+}
+#certifications .section-eyebrow--plain {
+  display: block;
+  margin-top: 14px;
+}
+#certifications .section-heading--with-icon::after {
+  margin-top: 14px;
+}
