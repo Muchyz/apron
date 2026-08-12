@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { ShieldCheck } from 'lucide-react';
+import { FileBadge, ShieldCheck } from 'lucide-react';
 
 const certifications = [
   {
@@ -85,7 +85,7 @@ export default function CertificationsPage() {
         <div className="container">
           <h2 className="section-heading section-heading--with-icon">
             <span className="section-heading__icon-wrap">
-              <ShieldCheck className="section-heading__icon" />
+              <FileBadge className="section-heading__icon" />
             </span>
             <span className="section-heading__text">
               Registered, <span className="accent">Licensed</span> &amp; Compliant
