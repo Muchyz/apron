@@ -170,7 +170,7 @@ export const galleryImages = [
   { id: 8, src: '/gallery/photo-08.jpg', caption: 'Officers saluting during an official visit' },
   { id: 9, src: '/gallery/photo-09.jpg', caption: 'Guard team saluting at a ceremony' },
   { id: 10, src: '/gallery/photo-10.jpg', caption: 'Officers standing at attention during a visit' },
-  { id: 11, src: '/gallery/photo-11.jpg', caption: 'Guard team with a client at the gate' },
+  { id: 11, src: '/gallery/photo-11.jpg', caption: 'Guard team with our Director' },
   { id: 12, src: '/gallery/photo-12.jpg', caption: 'Guards in drill formation' },
   { id: 13, src: '/gallery/photo-13.jpg', caption: 'Officers on parade during drill practice' },
   { id: 14, src: '/gallery/photo-14.jpg', caption: 'Officer on duty at the office' },

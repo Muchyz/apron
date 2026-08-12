@@ -7,8 +7,8 @@ export default function Gallery() {
   return (
     <section className="section" id="gallery">
       <div className="container">
-        <span className="section-eyebrow">See Us In Action</span>
-        <h2 className="section-heading">Our Gallery</h2>
+        <span className="section-eyebrow gallery-eyebrow">See Us In Action</span>
+        <h2 className="section-heading gallery-heading">Our Gallery</h2>
         <p className="section-intro" style={{ marginBottom: '26px' }}>
           Take a look at our guards, equipment, and operations in action.
         </p>
@@ -22,6 +22,9 @@ export default function Gallery() {
               aria-label={`Enlarge image: ${img.caption}`}
             >
               <img src={img.src} alt={img.caption} loading="lazy" />
+              <span className="gallery-item__overlay">
+                <span className="gallery-item__caption">{img.caption}</span>
+              </span>
             </button>
           ))}
         </div>
