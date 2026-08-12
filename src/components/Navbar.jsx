@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useLayoutEffect } from 'react';
 import { FacebookIcon, WhatsAppIcon, TikTokIcon, InstagramIcon } from './SocialIcons.jsx';
 import { Link, NavLink } from 'react-router-dom';
 import {
@@ -32,9 +32,24 @@ const hashLinks = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const close = () => setOpen(false);
+  const headerRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const setNavH = () => {
+      if (headerRef.current) {
+        document.documentElement.style.setProperty(
+          '--nav-h',
+          `${headerRef.current.offsetHeight}px`
+        );
+      }
+    };
+    setNavH();
+    window.addEventListener('resize', setNavH);
+    return () => window.removeEventListener('resize', setNavH);
+  }, []);
 
   return (
-    <header className="navbar">
+    <header className="navbar" ref={headerRef}>
       <div className="navbar__inner">
         <Link to="/" className="navbar__brand" onClick={close}>
           <img

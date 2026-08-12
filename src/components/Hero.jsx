@@ -9,6 +9,8 @@ const heroImages = [
   { src: '/hero-guard-3.jpg', alt: 'Apron Security guards in formation' },
 ];
 
+const badges = ['Licensed', 'Fully Insured', '24/7 Available'];
+
 function CountUp({ value }) {
   const ref = useRef(null);
   const [display, setDisplay] = useState(value.replace(/[0-9]/g, '0'));
@@ -58,84 +60,96 @@ export default function Hero() {
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % heroImages.length);
-    }, 4000);
+    }, 4500);
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <>
-      <section className="hero" id="home">
-        <div className="hero__panel">
-          <div className="container hero__panel-inner">
-            <div className="hero__eyebrow-row">
-              <span className="hero__eyebrow-rule" />
-              <span className="hero__eyebrow">{company.tagline}</span>
-            </div>
-
-            <h1 className="hero__headline">
-              Professional Security <span className="hero__headline-accent">Solutions</span> You Can Trust
-            </h1>
-
-            <p className="hero__subtext">
-              Our team of trained and experienced security guards are available 24/7 to
-              provide you with a comprehensive security solution tailored to your specific
-              needs.
-            </p>
-
-            <div className="hero__actions">
-              <Link to="/contact" className="btn btn--red">
-                Free Consultation
-                <ArrowRight size={17} strokeWidth={2.4} />
-              </Link>
-              <a href="#services" className="btn btn--outline">
-                <PhoneCall size={16} strokeWidth={2.4} />
-                Our Services
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className="hero__media">
-          {heroImages.map((img, i) => (
-            <img
-              key={img.src}
-              src={img.src}
-              alt={img.alt}
-              className={`hero__media-slide${i === activeIndex ? ' active' : ''}`}
-            />
-          ))}
-          <div className="hero__media-dots">
-            {heroImages.map((img, i) => (
-              <button
-                key={img.src}
-                className={`hero__media-dot${i === activeIndex ? ' active' : ''}`}
-                aria-label={`Show photo ${i + 1}`}
-                onClick={() => setActiveIndex(i)}
-              />
-            ))}
-          </div>
-        </div>
-
-        <div className="hero-stats">
-          <div className="container hero-stats__grid">
-          <div className="hero-stats__item">
-            <span className="hero-stats__icon"><Clock size={16} strokeWidth={2.2} /></span>
-            <strong><CountUp value="24/7" /></strong>
-            <span>Emergency Response</span>
-          </div>
-          <div className="hero-stats__item">
-            <span className="hero-stats__icon"><ShieldCheck size={16} strokeWidth={2.2} /></span>
-            <strong><CountUp value="100%" /></strong>
-            <span>Licensed &amp; Insured</span>
-          </div>
-          <div className="hero-stats__item">
-            <span className="hero-stats__icon"><Award size={16} strokeWidth={2.2} /></span>
-            <strong><CountUp value="10+" /></strong>
-            <span>Years Experience</span>
-          </div>
-        </div>
+    <section className="hero" id="home">
+      <div className="hero__media">
+        {heroImages.map((img, i) => (
+          <img
+            key={img.src}
+            src={img.src}
+            alt={img.alt}
+            className={`hero__media-slide${i === activeIndex ? ' active' : ''}`}
+          />
+        ))}
+        <div className="hero__scrim" />
       </div>
-      </section>
-    </>
+
+      <div className="hero__media-dots">
+        {heroImages.map((img, i) => (
+          <button
+            key={img.src}
+            className={`hero__media-dot${i === activeIndex ? ' active' : ''}`}
+            aria-label={`Show photo ${i + 1}`}
+            onClick={() => setActiveIndex(i)}
+          />
+        ))}
+      </div>
+
+      <div className="hero__layout container">
+        <div className="hero__badges hero__anim hero__anim-1">
+          {badges.map((b) => (
+            <span key={b} className="hero__badge">✓ {b}</span>
+          ))}
+        </div>
+
+        <div className="hero__spacer" />
+
+        <div className="hero__center">
+          <div className="hero__eyebrow-row hero__anim hero__anim-2">
+            <span className="hero__eyebrow-rule" />
+            <span className="hero__eyebrow">{company.tagline}</span>
+          </div>
+
+          <h1 className="hero__headline hero__anim hero__anim-3">
+            Professional Security <span className="hero__headline-accent">Solutions</span> You Can Trust
+          </h1>
+
+          <p className="hero__subtext hero__anim hero__anim-4">
+            Trained, licensed guards available 24/7 — tailored protection for your home, business, or event.
+          </p>
+
+          <div className="hero__actions hero__anim hero__anim-5">
+            <Link to="/contact" className="btn btn--red">
+              Free Consultation
+              <ArrowRight size={17} strokeWidth={2.4} />
+            </Link>
+            <a href="#services" className="btn btn--outline">
+              <PhoneCall size={16} strokeWidth={2.4} />
+              Our Services
+            </a>
+          </div>
+
+          <div className="hero-stats hero__anim hero__anim-6">
+            <div className="hero-stats__item">
+              <Clock size={16} strokeWidth={2.2} />
+              <div>
+                <strong><CountUp value="24/7" /></strong>
+                <span>Emergency Response</span>
+              </div>
+            </div>
+            <div className="hero-stats__item">
+              <ShieldCheck size={16} strokeWidth={2.2} />
+              <div>
+                <strong><CountUp value="100%" /></strong>
+                <span>Licensed &amp; Insured</span>
+              </div>
+            </div>
+            <div className="hero-stats__item">
+              <Award size={16} strokeWidth={2.2} />
+              <div>
+                <strong><CountUp value="10+" /></strong>
+                <span>Years Experience</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="hero__spacer" />
+      </div>
+    </section>
   );
 }
