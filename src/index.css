@@ -3180,14 +3180,14 @@ a:focus-visible, button:focus-visible {
 .clients-grid--visible .client-tile {
   animation: clientTileIn 0.6s ease forwards;
 }
-.clients-grid--visible .client-tile:nth-child(1) { animation-delay: 0.05s; }
-.clients-grid--visible .client-tile:nth-child(2) { animation-delay: 0.12s; }
-.clients-grid--visible .client-tile:nth-child(3) { animation-delay: 0.19s; }
-.clients-grid--visible .client-tile:nth-child(4) { animation-delay: 0.26s; }
-.clients-grid--visible .client-tile:nth-child(5) { animation-delay: 0.33s; }
-.clients-grid--visible .client-tile:nth-child(6) { animation-delay: 0.40s; }
-.clients-grid--visible .client-tile:nth-child(7) { animation-delay: 0.47s; }
-.clients-grid--visible .client-tile:nth-child(8) { animation-delay: 0.54s; }
+.clients-grid--visible .client-tile:nth-child(1) { animation-delay: 0.03s; }
+.clients-grid--visible .client-tile:nth-child(2) { animation-delay: 0.07s; }
+.clients-grid--visible .client-tile:nth-child(3) { animation-delay: 0.11s; }
+.clients-grid--visible .client-tile:nth-child(4) { animation-delay: 0.15s; }
+.clients-grid--visible .client-tile:nth-child(5) { animation-delay: 0.19s; }
+.clients-grid--visible .client-tile:nth-child(6) { animation-delay: 0.23s; }
+.clients-grid--visible .client-tile:nth-child(7) { animation-delay: 0.27s; }
+.clients-grid--visible .client-tile:nth-child(8) { animation-delay: 0.31s; }
 @keyframes clientTileIn {
   to {
     opacity: 1;

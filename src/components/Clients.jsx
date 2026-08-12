@@ -12,12 +12,11 @@ export default function Clients() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          console.log('Partners section visible, triggering animation');
           setVisible(true);
           observer.disconnect();
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.2, rootMargin: '-15% 0px -15% 0px' }
     );
 
     observer.observe(el);
