@@ -3040,3 +3040,110 @@ a:focus-visible, button:focus-visible {
 @media (max-width: 480px) {
   .scroll-to-top { right: 18px; bottom: 88px; width: 42px; height: 42px; }
 }
+
+/* ---------- Clients section: centered "Our Partners" heading ---------- */
+.clients-heading {
+  text-align: center;
+  margin: 0 auto 36px;
+  display: inline-block;
+  position: relative;
+}
+.clients-heading::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.clients-section .container {
+  text-align: center;
+}
+
+/* ---------- Our Partners: modern logo grid ---------- */
+.clients-section {
+  position: relative;
+  background: linear-gradient(180deg, #f7f8fa 0%, var(--white) 100%);
+  text-align: center;
+  overflow: hidden;
+}
+.clients-section::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 520px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(212,160,23,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+.clients-eyebrow {
+  position: relative;
+  z-index: 1;
+  justify-content: center;
+}
+.clients-heading {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin: 0 auto 10px;
+}
+.clients-heading::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.clients-sub {
+  position: relative;
+  z-index: 1;
+  max-width: 480px;
+  margin: 0 auto 44px;
+  color: var(--text-muted, #5a6472);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.clients-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+@media (min-width: 700px) {
+  .clients-grid { grid-template-columns: repeat(4, 1fr); gap: 18px; }
+}
+.client-tile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 3 / 2;
+  padding: 16px;
+  background: var(--white);
+  border: 1px solid rgba(11,29,51,0.07);
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(11,29,51,0.05);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.client-tile::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--red) 0%, #e8c25a 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.client-tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 30px rgba(11,29,51,0.12);
+  border-color: rgba(212,160,23,0.35);
+}
+.client-tile:hover::after {
+  transform: scaleX(1);
+}
+.client-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

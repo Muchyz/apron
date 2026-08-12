@@ -211,12 +211,6 @@ export const testimonials = [
   },
 ];
 
-export const clientLogos = Array.from({ length: 8 }, (_, i) => ({
-  id: i + 1,
-  src: `https://placehold.co/160x80/F5F6F8/9AA3AF?text=Client+${i + 1}`,
-  alt: `Placeholder logo of client or partner ${i + 1}`,
-}));
-
 export const faqs = [
   {
     q: 'Do you offer 24/7 security services?',
@@ -257,3 +251,14 @@ export const director = {
     'I thank our clients, employees and partners for their continued trust and support as we work together to create safer homes, workplaces and communities.',
   ],
 };
+
+export const clientLogos = [
+  { id: 'hikvision', src: '/assets/clients/hikvision.png', alt: 'Hikvision' },
+  { id: 'suprema', src: '/assets/clients/suprema.png', alt: 'Suprema' },
+  { id: 'risco', src: '/assets/clients/risco.png', alt: 'Risco Group' },
+  { id: 'dlink', src: '/assets/clients/dlink.png', alt: 'D-Link' },
+  { id: 'sherlotronics', src: '/assets/clients/sherlotronics.png', alt: 'Sherlotronics' },
+  { id: 'zkteco', src: '/assets/clients/zkteco.png', alt: 'ZKTeco' },
+  { id: 'garrett', src: '/assets/clients/garrett.png', alt: 'Garrett Metal Detectors' },
+  { id: 'secolink', src: '/assets/clients/secolink.png', alt: 'Secolink' },
+];

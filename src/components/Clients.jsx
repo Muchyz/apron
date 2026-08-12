@@ -2,17 +2,20 @@ import { clientLogos } from '../data/content.js';
 
 export default function Clients() {
   return (
-    <section className="section section--tight">
+    <section className="section section--tight clients-section">
       <div className="container">
-        <span className="section-eyebrow" style={{ textAlign: 'center', display: 'block' }}>
-          Trusted By
-        </span>
-        <h2 className="section-heading section-heading--navy" style={{ textAlign: 'center', marginBottom: '30px' }}>
-          Businesses, Institutions &amp; Residential Estates
+        <span className="section-eyebrow clients-eyebrow">Who We Work With</span>
+        <h2 className="section-heading clients-heading">
+          Our Trusted Partners
         </h2>
-        <div className="clients-strip">
+        <p className="clients-sub">
+          Authorized dealers and distributors of world-class security equipment brands
+        </p>
+        <div className="clients-grid">
           {clientLogos.map((logo) => (
-            <img key={logo.id} src={logo.src} alt={logo.alt} width={140} height={70} loading="lazy" />
+            <div className="client-tile" key={logo.id}>
+              <img src={logo.src} alt={logo.alt} loading="lazy" />
+            </div>
           ))}
         </div>
       </div>
