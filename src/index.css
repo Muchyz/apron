@@ -3201,3 +3201,146 @@ a:focus-visible, button:focus-visible {
     transform: none;
   }
 }
+
+/* ---------- Contact page hero: background photo ---------- */
+.page-hero--contact {
+  position: relative;
+  overflow: hidden;
+  padding: 90px 0 76px;
+  text-align: center;
+}
+.page-hero--contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('/assets/hero/contact-hero.jpg');
+  background-size: cover;
+  background-position: center 22%;
+  animation: heroSlowZoom 18s ease-in-out infinite alternate;
+  z-index: 0;
+}
+.page-hero--contact::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(8,22,39,0.75) 0%, rgba(11,29,51,0.55) 45%, rgba(8,22,39,0.85) 100%);
+  z-index: 1;
+}
+@keyframes heroSlowZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-hero--contact::before { animation: none; }
+}
+.page-hero--contact .section-eyebrow {
+  position: relative;
+  z-index: 2;
+  color: #e8c25a;
+  justify-content: center;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+.page-hero--contact h1 {
+  position: relative;
+  z-index: 2;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 800;
+  text-transform: none;
+  color: var(--white);
+  font-size: clamp(2.1rem, 5.5vw, 3.4rem);
+  margin: 12px 0 0;
+  letter-spacing: -0.01em;
+  text-shadow: 0 4px 18px rgba(0,0,0,0.55);
+}
+.page-hero--contact h1::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  margin: 18px auto 0;
+  background: linear-gradient(90deg, var(--red) 0%, #e8c25a 100%);
+  border-radius: 2px;
+}
+.page-hero--contact .section-eyebrow {
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+@media (max-width: 480px) {
+  .page-hero--contact { padding: 56px 0; }
+}
+
+/* ---------- Contact page hero: split layout with photo card ---------- */
+.contact-hero-split {
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-dark) 100%);
+  padding: 56px 0;
+}
+.contact-hero-split__inner {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 32px;
+  align-items: center;
+}
+@media (min-width: 800px) {
+  .contact-hero-split__inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+  }
+}
+.contact-hero-split__text {
+  text-align: center;
+  flex: 1;
+}
+@media (min-width: 800px) {
+  .contact-hero-split__text { text-align: left; }
+}
+.contact-hero-split__text .section-eyebrow {
+  color: #e8c25a;
+  justify-content: center;
+}
+@media (min-width: 800px) {
+  .contact-hero-split__text .section-eyebrow { justify-content: flex-start; }
+}
+.contact-hero-split__text h1 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 800;
+  text-transform: none;
+  color: var(--white);
+  font-size: clamp(2rem, 5vw, 2.9rem);
+  margin: 10px 0 16px;
+  letter-spacing: -0.01em;
+}
+.contact-hero-split__lead {
+  color: rgba(255,255,255,0.75);
+  font-size: 1rem;
+  line-height: 1.65;
+  max-width: 420px;
+  margin: 0 auto;
+}
+@media (min-width: 800px) {
+  .contact-hero-split__lead { margin: 0; }
+}
+.contact-hero-split__photo {
+  flex: 1;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 3px solid rgba(232,194,90,0.4);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+.contact-hero-split__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  display: block;
+}
+
+.contact-section {
+  padding-top: 8px;
+}

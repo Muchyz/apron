@@ -5,7 +5,7 @@ import ContactForm from './ContactForm.jsx';
 
 export default function ContactSection() {
   return (
-    <section className="section" id="contact">
+    <section className="section contact-section" id="contact">
       <div className="container">
         <span className="section-eyebrow">Get In Touch</span>
         <h2 className="section-heading" style={{ marginBottom: '30px' }}>
