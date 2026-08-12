@@ -2238,3 +2238,62 @@ a:focus-visible, button:focus-visible {
 .service-detail:nth-of-type(3n+3) .service-detail__checklist li::before {
   color: var(--white);
 }
+
+
+/* ---------- Why Choose Us: card grid matching Our Services theme ---------- */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+@media (max-width: 620px) {
+  .why-grid { grid-template-columns: 1fr; }
+}
+.why-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  border-left: 4px solid var(--red);
+  padding: 22px 20px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+.why-card p {
+  margin: 0;
+  font-weight: 500;
+  color: var(--navy);
+  line-height: 1.5;
+  padding-top: 2px;
+}
+.why-card__icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(150deg, var(--red) 0%, #8a0000 100%);
+  color: var(--white);
+  box-shadow: 0 6px 14px rgba(179,0,0,0.3);
+}
+.why-card:nth-child(3n+2) {
+  border-left-color: var(--navy);
+}
+.why-card:nth-child(3n+2) .why-card__icon {
+  background: linear-gradient(150deg, var(--navy) 0%, var(--navy-dark) 100%);
+  box-shadow: 0 6px 14px rgba(20,40,60,0.35);
+}
+.why-card:nth-child(3n+3) {
+  border-left-color: var(--svc-green);
+}
+.why-card:nth-child(3n+3) .why-card__icon {
+  background: linear-gradient(150deg, var(--svc-green) 0%, var(--svc-green-dark) 100%);
+  box-shadow: 0 6px 14px rgba(26,122,60,0.35);
+}
