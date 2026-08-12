@@ -1,11 +1,11 @@
 export default function About() {
   return (
-    <section className="section" id="about">
-      <div className="container split">
+    <section className="section about-section" id="about">
+      <div className="container split about-split">
         <div>
           <span className="section-eyebrow">Who We Are</span>
-          <h2 className="section-heading">About Us</h2>
-          <p className="section-intro">
+          <h2 className="section-heading about-heading">About Us</h2>
+          <p className="section-intro about-intro">
             APRON SECURITY SERVICES LIMITED is a professional security services provider
             based in Nairobi, Kenya. The company is committed to delivering reliable,
             disciplined, and high-quality security solutions to businesses, residential
@@ -15,12 +15,15 @@ export default function About() {
             personnel and modern security technology.
           </p>
         </div>
-        <div>
-          <img
-            src="/team-photo.jpg"
-            alt="Apron Security guards standing in formation outside the head office"
-            style={{ borderRadius: '16px', boxShadow: 'var(--shadow-card)', width: '100%', height: 'auto', objectFit: 'cover' }}
-          />
+        <div className="about-photo">
+          <div className="about-photo__frame">
+            <img
+              src="/team-photo.jpg"
+              alt="Apron Security guards standing in formation outside the head office"
+              className="about-photo__img"
+            />
+          </div>
+          <span className="about-photo__badge">Est. Nairobi, Kenya</span>
         </div>
       </div>
     </section>
