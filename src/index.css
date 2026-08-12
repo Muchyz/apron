@@ -1082,23 +1082,125 @@ button { font-family: inherit; cursor: pointer; }
   position: relative;
 }
 
-/* ---------- Director's message ---------- */
+/* ---------- Director's message: editorial navy panel ---------- */
+.director-section {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-dark) 55%, #0c1f33 100%);
+  isolation: isolate;
+}
+.director-section .section-eyebrow { color: #e8c25a; }
+.director__watermark {
+  position: absolute;
+  top: -80px;
+  left: 20px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 22rem;
+  line-height: 1;
+  color: rgba(255,255,255,0.04);
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
 .director {
+  position: relative;
+  z-index: 1;
   display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 40px;
+  grid-template-columns: 300px 1fr;
+  gap: 64px;
   align-items: start;
 }
-@media (max-width: 860px) { .director { grid-template-columns: 1fr; } }
-.director__photo img {
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-card);
-  width: 100%;
-  object-fit: cover;
+@media (max-width: 860px) {
+  .director { grid-template-columns: 1fr; gap: 40px; }
 }
-.director__name { color: var(--navy); margin-bottom: 2px; }
-.director__title { color: var(--red); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 16px; }
-.director__quote-mark { font-size: 2.4rem; color: var(--gold); line-height: 0.5; display: block; margin-bottom: 6px; }
+.director__photo {
+  position: relative;
+  padding: 14px 0 74px 14px;
+}
+.director__photo-frame {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.director__photo-frame::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: -14px;
+  right: 14px;
+  bottom: 14px;
+  border: 3px solid #e8c25a;
+  border-radius: 6px;
+  z-index: -1;
+}
+.director__photo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 6px;
+  filter: grayscale(10%) contrast(1.05);
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+.director__photo:hover .director__photo-img {
+  filter: grayscale(0%) contrast(1.1);
+  transform: scale(1.02);
+}
+.director__signature {
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+  right: 0;
+}
+.director__name {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 700;
+  color: var(--white);
+  font-size: 1.15rem;
+  margin: 0 0 8px;
+}
+.director__rule {
+  display: block;
+  width: 56px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--red) 0%, #e8c25a 100%);
+  margin-bottom: 8px;
+}
+.director__title {
+  color: rgba(232,194,90,0.75);
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+.director__content {
+  position: relative;
+  z-index: 1;
+}
+.director__lead {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(1.4rem, 3vw, 1.85rem);
+  line-height: 1.5;
+  color: var(--white);
+  margin: 14px 0 22px;
+  padding-left: 24px;
+  border-left: 3px solid var(--red);
+}
+.director__message p {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.78);
+  margin: 0 0 16px;
+}
+.director__message p:last-child { margin-bottom: 0; }
 
 /* ---------- Contact / Footer (redesigned) ---------- */
 .contact-grid {
